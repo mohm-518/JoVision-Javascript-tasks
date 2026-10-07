@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Task 4</title>
+    <title>Task 5</title>
 </head>
 <body>
 
@@ -14,21 +14,20 @@
             let numbers = [];
 
             for (let i = 0; i <= 100; i++) {
-              numbers.push(i);
+                numbers.push(i);
             }
 
             let sum = 0;
 
             for (let i = 0; i < numbers.length; i++) {
-                sum += numbers[i];
+                if (numbers[i] % 2 === 0) {
+                    sum += numbers[i];
+                }
             }
 
             document.write("The sum is: " +sum);
-            //alert("The sum is: " +sum);
         });
-    
-     </script>  
-     
+    </script>
 
 </body>
 </html>
