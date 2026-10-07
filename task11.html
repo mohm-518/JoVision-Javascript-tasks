@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 11</title>
+</head>
+<body>
+
+    <button id="getIp">Get ip</button>
+
+    <script>
+        document.getElementById("getIp").addEventListener("click", function() {
+            fetch("https://api.ipify.org/")
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error("Request failed");
+                    }
+
+                    return response.text();
+                })
+                .then(function(ip) {
+                    document.getElementById("getIp").textContent = ip;
+                })
+                .catch(function(error) {
+                    window.alert(error);
+                });
+        });
+    </script>
+
+</body>
+</html>
+
